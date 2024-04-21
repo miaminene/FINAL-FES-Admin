@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FES - Admin Student</title>
+    <link rel="stylesheet" href="styleadmin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="desktop-outline"></ion-icon></span>
+                         <span class="title"><b>FES | KLD</b></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                            <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                            <span class="title">Faculty</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="student.html">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                            <span class="title">Student</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+                            <span class="title">Evaluation</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="documents-outline"></ion-icon></span>
+                            <span class="title">Questionnaire</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                            <span class="title">Log Out</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!--MAIN-->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+        <!--SEARCH BAR-->
+        <div class="search">
+            <label>
+                <input type="text" placeholder="Search Here">
+                <ion-icon name="search-outline"></ion-icon>
+            </label>
+        </div>
+                <!--USERIMG-->
+                <div class="user">
+                    <img src="img/user.jpeg">
+                </div>
+            </div>
+
+
+            
+        <!--STUDENT RECORD FILTER-->
+        <div class="studentContainer">
+            <header>
+                <div class="filterStudent">
+                    <div class="student">
+                       <b> Show </b><select name="" id="table_size">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select> <b>Student</b>
+                    </div>
+
+                    <div class="addStudentBtn">
+                        <button><i class="fa-regular fa-plus"></i><a href="newstudent.html">New Student</a></button>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <table>
+
+                <thead>
+                    <tr class="content">
+                        <th>No.</th>
+                        <th>KLD Number</th>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>
+                            Course
+                            <select name="" id="table_size">
+                                <option value="all">All</option>
+                                <option value="bsis">BSIS</option>
+                                <option value="ihpd">IHPD</option>
+                                <option value="iom">IOM</option>
+                                <option value="ion">ION</option>
+                                <option value="ioe">IOE</option>
+                                </select>
+                        </th>
+                        <th>
+                            Section
+                            <select name="" id="table_size">
+                                <option value="all">All</option>
+                                <option value="101">101</option>
+                                <option value="102">102</option>
+                                <option value="103">103</option>
+                                <option value="104">104</option>
+                                <option value="105">105</option>
+
+                                <option value="201">201</option>
+                                <option value="202">202</option>
+                                <option value="203">203</option>
+                                <option value="204">204</option>
+                                <option value="205">205</option>
+
+                                <option value="301">301</option>
+                                <option value="302">302</option>
+                                <option value="303">303</option>
+                                <option value="304">304</option>
+                                <option value="305">305</option>
+
+                                </select>
+                        </th>
+                        <th>
+                            Year
+                            <select name="" id="table_size">
+                                <option value="all">All</option>
+                                <option value="1st">1st Year</option>
+                                <option value="2nd">2nd Year</option>
+                                <option value="3rd">3rd Year</option>
+                                </select>
+                        </th>
+                        <th>
+                            Sex
+                            <select name="" id="table_size">
+                                <option value="All">All</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                </select>
+                        </th>
+                        <th>
+                            Status
+                            <select name="" id="table_size">
+                                <option value="All">All</option>
+                                <option value="Done">Done</option>
+                                <option value="Pending">Pending</option>
+                                </select>
+                        </th>
+                        <th>
+                            Action
+                            <button class="apply">Apply</button>
+                        </th> <!--10-->
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>KLD-22-000121</td>
+                        <td>Jemilson</td>
+                        <td>Andaya</td>
+                        <td>Buscagan</td>
+                        <td>jabuscagan@kld.edu.ph</td>
+                        <td>BSIS</td>
+                        <td>201</td>
+                        <td>2nd year</td>
+                        <td>Male</td>
+                        <td>Done</td>
+                        <td>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>KLD-22-000132</td>
+                        <td>John Lloyd</td>
+                        <td>Flordeliza</td>
+                        <td>Mata</td>
+                        <td>jlfmata@kld.edu.ph</td>
+                        <td>BSIS</td>
+                        <td>201</td>
+                        <td>2nd year</td>
+                        <td>Male</td>
+                        <td>Pending</td>
+                        <td>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>KLD-22-000135</td>
+                        <td>Kimberly</td>
+                        <td>Firmalino</td>
+                        <td>Colicot</td>
+                        <td>kfcolicot@kld.edu.ph</td>
+                        <td>BSIS</td>
+                        <td>205</td>
+                        <td>2nd year</td>
+                        <td>Female</td>
+                        <td>Done</td>
+                        <td>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>KLD-22-000139</td>
+                        <td>Jasia Dalaine</td>
+                        <td>Andaya</td>
+                        <td>Batistis</td>
+                        <td>jdbatistis@kld.edu.ph</td>
+                        <td>BSIS</td>
+                        <td>301</td>
+                        <td>3rd year</td>
+                        <td>Female</td>
+                        <td>Done</td>
+                        <td>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>KLD-22-000167</td>
+                        <td>Ma. Lyzel</td>
+                        <td>Cruz</td>
+                        <td>Lopez</td>
+                        <td>mllopez@kld.edu.ph</td>
+                        <td>BSIS</td>
+                        <td>102</td>
+                        <td>1st year</td>
+                        <td>Female</td>
+                        <td>Pending</td>
+                        <td>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--===CHART JS===-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="chart.js"></script>
+
+    <script>
+        //MenuToggle
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+        
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+        //add hovered class iin selected list item
+        let list = document.querySelectorAll('.naviagation li');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered')
+        }
+        list.forEach((item) =>
+        item.addEventListener('mouseover',activeLink));
+    </script>
+</body>
+</html>
