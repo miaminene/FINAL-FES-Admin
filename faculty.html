@@ -1,0 +1,1314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FES - Admin Faculty</title>
+    <link rel="stylesheet" href="styleadmin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="desktop-outline"></ion-icon></span>
+                         <span class="title"><b>FES | KLD</b></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                            <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="faculty.html">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                            <span class="title">Faculty</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="student.html">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                            <span class="title">Student</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+                            <span class="title">Evaluation</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="documents-outline"></ion-icon></span>
+                            <span class="title">Questionnaire</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                            <span class="title">Log Out</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!--MAIN-->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+        <!--SEARCH BAR-->
+        <div class="search">
+            <label>
+                <input type="text" placeholder="Search Here">
+                <ion-icon name="search-outline"></ion-icon>
+            </label>
+        </div>
+
+
+                <!--USERIMG-->
+                <div class="user">
+                    <img src="img/user.jpeg">
+                </div>
+            </div>
+
+
+
+             <!-- Faculty Modal Popup -->
+             <div class="modal" id="modal">
+                <div class="modal-header">
+                    <div class="title">John Dee Matibag</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="searchAssign">
+                        <label>
+                            <input type="text" placeholder="Search Here">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </div>
+
+                    <div class="title-SectionEval">Add sections that will evaluate</div>
+
+                    <table class="">
+                        <thead>
+                            <tr class="content-courseSection">
+                                <th>
+                                    Course
+                                    <select name="" id="table_size">
+                                        <option value="all">All</option>
+                                        <option value="bsis">BSIS</option>
+                                        <option value="ihpd">BSP</option>
+                                        <option value="iom">BSM</option>
+                                        <option value="ion">BSN</option>
+                                        <option value="ioe">BSCE</option>
+                                        </select>
+                                </th>
+                                <th>
+                                    Section
+                                    <select name="" id="table_size">
+                                        <option value="All">All</option>
+                                        <option value="section">101</option>
+                                        <option value="section">102</option>
+                                        <option value="section">103</option>
+                                        <option value="section">104</option>
+                                        <option value="section">105</option>
+                                        <option value="section">201</option>
+                                        <option value="section">202</option>
+                                        <option value="section">203</option>
+                                        <option value="section">204</option>
+                                        <option value="section">205</option>
+                                        <option value="section">301</option>
+                                        <option value="section">302</option>
+                                        <option value="section">303</option>
+                                        <option value="section">304</option>
+                                        <option value="section">305</option>
+                                        </select>
+                                </th>
+                                <th>
+                                    Add Sections
+                                    <!--<button class="apply">Apply</button>-->
+                                </th> <!--10-->
+                            </tr>
+                        </thead>
+                        <tbody class="content">
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>101</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>102</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>103</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>104</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>105</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>201</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>202</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>203</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>204</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>205</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>301</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>302</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>303</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>304</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>305</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>101</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>102</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>103</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>104</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                     
+                        <!--<div class="title-SectionEval">Section Evaluation</div>-->
+                        <table>
+                            <thead>
+                                <tr class="content-courseSection">
+                                    <th>
+                                        Course
+                                        <select name="" id="table_size">
+                                            <option value="all">All</option>
+                                            <option value="bsis">BSIS</option>
+                                            <option value="ihpd">BSP</option>
+                                            <option value="iom">BSM</option>
+                                            <option value="ion">BSN</option>
+                                            <option value="ioe">BSCE</option>
+                                            </select>
+                                    </th>
+                                    <th>
+                                        Section
+                                        <select name="" id="table_size">
+                                            <option value="All">All</option>
+                                            <option value="section">101</option>
+                                            <option value="section">102</option>
+                                            <option value="section">103</option>
+                                            <option value="section">104</option>
+                                            <option value="section">105</option>
+                                            <option value="section">201</option>
+                                            <option value="section">202</option>
+                                            <option value="section">203</option>
+                                            <option value="section">204</option>
+                                            <option value="section">205</option>
+                                            <option value="section">301</option>
+                                            <option value="section">302</option>
+                                            <option value="section">303</option>
+                                            <option value="section">304</option>
+                                            <option value="section">305</option>
+                                            </select>
+                                    </th>
+                                    <th>
+                                        Remove Sections
+                                        <button class="apply">Remove All</button>
+                                    </th> <!--10-->
+                                </tr>
+                            </thead>
+                            <tbody class="content">
+                                <tr class="content">
+                                    <td>BSIS</td>
+                                    <td>101</td>
+                                    <td><button class="view">-</button></td>
+                            </tbody>
+                        </table>
+                
+                </div>
+             </div>
+
+             <div id="overlay"></div>
+
+
+             <div class="modal" id="modal2">
+                <div class="modal-header">
+                    <div class="title">John Lloyd Flordeliza Cruz</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="searchAssign">
+                        <label>
+                            <input type="text" placeholder="Search Here">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </div>
+
+                    <div class="title-SectionEval">Add sections that will evaluate</div>
+
+                    <table class="">
+                        <thead>
+                            <tr class="content-courseSection">
+                                <th>
+                                    Course
+                                    <select name="" id="table_size">
+                                        <option value="all">All</option>
+                                        <option value="bsis">BSIS</option>
+                                        <option value="ihpd">BSP</option>
+                                        <option value="iom">BSM</option>
+                                        <option value="ion">BSN</option>
+                                        <option value="ioe">BSCE</option>
+                                        </select>
+                                </th>
+                                <th>
+                                    Section
+                                    <select name="" id="table_size">
+                                        <option value="All">All</option>
+                                        <option value="section">101</option>
+                                        <option value="section">102</option>
+                                        <option value="section">103</option>
+                                        <option value="section">104</option>
+                                        <option value="section">105</option>
+                                        <option value="section">201</option>
+                                        <option value="section">202</option>
+                                        <option value="section">203</option>
+                                        <option value="section">204</option>
+                                        <option value="section">205</option>
+                                        <option value="section">301</option>
+                                        <option value="section">302</option>
+                                        <option value="section">303</option>
+                                        <option value="section">304</option>
+                                        <option value="section">305</option>
+                                        </select>
+                                </th>
+                                <th>
+                                    Add Sections
+                                    <!--<button class="apply">Apply</button>-->
+                                </th> <!--10-->
+                            </tr>
+                        </thead>
+                        <tbody class="content">
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>101</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>102</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>103</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>104</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>105</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>201</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>202</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>203</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>204</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>205</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>301</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>302</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>303</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>304</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>305</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>101</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>102</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>103</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>104</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                     
+                        <!--<div class="title-SectionEval">Section Evaluation</div>-->
+                        <table>
+                            <thead>
+                                <tr class="content-courseSection">
+                                    <th>
+                                        Course
+                                        <select name="" id="table_size">
+                                            <option value="all">All</option>
+                                            <option value="bsis">BSIS</option>
+                                            <option value="ihpd">BSP</option>
+                                            <option value="iom">BSM</option>
+                                            <option value="ion">BSN</option>
+                                            <option value="ioe">BSCE</option>
+                                            </select>
+                                    </th>
+                                    <th>
+                                        Section
+                                        <select name="" id="table_size">
+                                            <option value="All">All</option>
+                                            <option value="section">101</option>
+                                            <option value="section">102</option>
+                                            <option value="section">103</option>
+                                            <option value="section">104</option>
+                                            <option value="section">105</option>
+                                            <option value="section">201</option>
+                                            <option value="section">202</option>
+                                            <option value="section">203</option>
+                                            <option value="section">204</option>
+                                            <option value="section">205</option>
+                                            <option value="section">301</option>
+                                            <option value="section">302</option>
+                                            <option value="section">303</option>
+                                            <option value="section">304</option>
+                                            <option value="section">305</option>
+                                            </select>
+                                    </th>
+                                    <th>
+                                        Remove Sections
+                                        <button class="apply">Remove All</button>
+                                    </th> <!--10-->
+                                </tr>
+                            </thead>
+                            <tbody class="content">
+                                <tr class="content">
+                                    <td>BSIS</td>
+                                    <td>101</td>
+                                    <td><button class="view">-</button></td>
+                            </tbody>
+                        </table>
+                
+                </div>
+             </div>
+
+             <div id="overlay"></div>
+
+
+
+             <div class="modal" id="modal3">
+                <div class="modal-header">
+                    <div class="title">Kim Firmalino Chiu</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="searchAssign">
+                        <label>
+                            <input type="text" placeholder="Search Here">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </div>
+
+                    <div class="title-SectionEval">Add sections that will evaluate</div>
+
+                    <table class="">
+                        <thead>
+                            <tr class="content-courseSection">
+                                <th>
+                                    Course
+                                    <select name="" id="table_size">
+                                        <option value="all">All</option>
+                                        <option value="bsis">BSIS</option>
+                                        <option value="ihpd">BSP</option>
+                                        <option value="iom">BSM</option>
+                                        <option value="ion">BSN</option>
+                                        <option value="ioe">BSCE</option>
+                                        </select>
+                                </th>
+                                <th>
+                                    Section
+                                    <select name="" id="table_size">
+                                        <option value="All">All</option>
+                                        <option value="section">101</option>
+                                        <option value="section">102</option>
+                                        <option value="section">103</option>
+                                        <option value="section">104</option>
+                                        <option value="section">105</option>
+                                        <option value="section">201</option>
+                                        <option value="section">202</option>
+                                        <option value="section">203</option>
+                                        <option value="section">204</option>
+                                        <option value="section">205</option>
+                                        <option value="section">301</option>
+                                        <option value="section">302</option>
+                                        <option value="section">303</option>
+                                        <option value="section">304</option>
+                                        <option value="section">305</option>
+                                        </select>
+                                </th>
+                                <th>
+                                    Add Sections
+                                    <!--<button class="apply">Apply</button>-->
+                                </th> <!--10-->
+                            </tr>
+                        </thead>
+                        <tbody class="content">
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>101</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>102</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>103</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>104</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>105</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>201</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>202</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>203</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>204</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>205</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>301</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>302</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>303</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>304</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>305</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>101</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>102</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>103</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>104</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                     
+                        <!--<div class="title-SectionEval">Section Evaluation</div>-->
+                        <table>
+                            <thead>
+                                <tr class="content-courseSection">
+                                    <th>
+                                        Course
+                                        <select name="" id="table_size">
+                                            <option value="all">All</option>
+                                            <option value="bsis">BSIS</option>
+                                            <option value="ihpd">BSP</option>
+                                            <option value="iom">BSM</option>
+                                            <option value="ion">BSN</option>
+                                            <option value="ioe">BSCE</option>
+                                            </select>
+                                    </th>
+                                    <th>
+                                        Section
+                                        <select name="" id="table_size">
+                                            <option value="All">All</option>
+                                            <option value="section">101</option>
+                                            <option value="section">102</option>
+                                            <option value="section">103</option>
+                                            <option value="section">104</option>
+                                            <option value="section">105</option>
+                                            <option value="section">201</option>
+                                            <option value="section">202</option>
+                                            <option value="section">203</option>
+                                            <option value="section">204</option>
+                                            <option value="section">205</option>
+                                            <option value="section">301</option>
+                                            <option value="section">302</option>
+                                            <option value="section">303</option>
+                                            <option value="section">304</option>
+                                            <option value="section">305</option>
+                                            </select>
+                                    </th>
+                                    <th>
+                                        Remove Sections
+                                        <button class="apply">Remove All</button>
+                                    </th> <!--10-->
+                                </tr>
+                            </thead>
+                            <tbody class="content">
+                                <tr class="content">
+                                    <td>BSIS</td>
+                                    <td>101</td>
+                                    <td><button class="view">-</button></td>
+                            </tbody>
+                        </table>
+                
+                </div>
+             </div>
+
+             <div id="overlay"></div>
+
+             <div class="modal" id="modal4">
+                <div class="modal-header">
+                    <div class="title">Kathryn Andaya Bernardo</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="searchAssign">
+                        <label>
+                            <input type="text" placeholder="Search Here">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </div>
+
+                    <div class="title-SectionEval">Add sections that will evaluate</div>
+
+                    <table class="">
+                        <thead>
+                            <tr class="content-courseSection">
+                                <th>
+                                    Course
+                                    <select name="" id="table_size">
+                                        <option value="all">All</option>
+                                        <option value="bsis">BSIS</option>
+                                        <option value="ihpd">BSP</option>
+                                        <option value="iom">BSM</option>
+                                        <option value="ion">BSN</option>
+                                        <option value="ioe">BSCE</option>
+                                        </select>
+                                </th>
+                                <th>
+                                    Section
+                                    <select name="" id="table_size">
+                                        <option value="All">All</option>
+                                        <option value="section">101</option>
+                                        <option value="section">102</option>
+                                        <option value="section">103</option>
+                                        <option value="section">104</option>
+                                        <option value="section">105</option>
+                                        <option value="section">201</option>
+                                        <option value="section">202</option>
+                                        <option value="section">203</option>
+                                        <option value="section">204</option>
+                                        <option value="section">205</option>
+                                        <option value="section">301</option>
+                                        <option value="section">302</option>
+                                        <option value="section">303</option>
+                                        <option value="section">304</option>
+                                        <option value="section">305</option>
+                                        </select>
+                                </th>
+                                <th>
+                                    Add Sections
+                                    <!--<button class="apply">Apply</button>-->
+                                </th> <!--10-->
+                            </tr>
+                        </thead>
+                        <tbody class="content">
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>101</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>102</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>103</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>104</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>105</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>201</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>202</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>203</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>204</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>205</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>301</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>302</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>303</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>304</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>305</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>101</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>102</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>103</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>104</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                     
+                        <!--<div class="title-SectionEval">Section Evaluation</div>-->
+                        <table>
+                            <thead>
+                                <tr class="content-courseSection">
+                                    <th>
+                                        Course
+                                        <select name="" id="table_size">
+                                            <option value="all">All</option>
+                                            <option value="bsis">BSIS</option>
+                                            <option value="ihpd">BSP</option>
+                                            <option value="iom">BSM</option>
+                                            <option value="ion">BSN</option>
+                                            <option value="ioe">BSCE</option>
+                                            </select>
+                                    </th>
+                                    <th>
+                                        Section
+                                        <select name="" id="table_size">
+                                            <option value="All">All</option>
+                                            <option value="section">101</option>
+                                            <option value="section">102</option>
+                                            <option value="section">103</option>
+                                            <option value="section">104</option>
+                                            <option value="section">105</option>
+                                            <option value="section">201</option>
+                                            <option value="section">202</option>
+                                            <option value="section">203</option>
+                                            <option value="section">204</option>
+                                            <option value="section">205</option>
+                                            <option value="section">301</option>
+                                            <option value="section">302</option>
+                                            <option value="section">303</option>
+                                            <option value="section">304</option>
+                                            <option value="section">305</option>
+                                            </select>
+                                    </th>
+                                    <th>
+                                        Remove Sections
+                                        <button class="apply">Remove All</button>
+                                    </th> <!--10-->
+                                </tr>
+                            </thead>
+                            <tbody class="content">
+                                <tr class="content">
+                                    <td>BSIS</td>
+                                    <td>101</td>
+                                    <td><button class="view">-</button></td>
+                            </tbody>
+                        </table>
+                
+                </div>
+             </div>
+
+             <div id="overlay"></div>
+
+
+             <div class="modal" id="modal5">
+                <div class="modal-header">
+                    <div class="title">Ma. Leonora Cruz Teresa</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="searchAssign">
+                        <label>
+                            <input type="text" placeholder="Search Here">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </div>
+
+                    <div class="title-SectionEval">Add sections that will evaluate</div>
+
+                    <table class="">
+                        <thead>
+                            <tr class="content-courseSection">
+                                <th>
+                                    Course
+                                    <select name="" id="table_size">
+                                        <option value="all">All</option>
+                                        <option value="bsis">BSIS</option>
+                                        <option value="ihpd">BSP</option>
+                                        <option value="iom">BSM</option>
+                                        <option value="ion">BSN</option>
+                                        <option value="ioe">BSCE</option>
+                                        </select>
+                                </th>
+                                <th>
+                                    Section
+                                    <select name="" id="table_size">
+                                        <option value="All">All</option>
+                                        <option value="section">101</option>
+                                        <option value="section">102</option>
+                                        <option value="section">103</option>
+                                        <option value="section">104</option>
+                                        <option value="section">105</option>
+                                        <option value="section">201</option>
+                                        <option value="section">202</option>
+                                        <option value="section">203</option>
+                                        <option value="section">204</option>
+                                        <option value="section">205</option>
+                                        <option value="section">301</option>
+                                        <option value="section">302</option>
+                                        <option value="section">303</option>
+                                        <option value="section">304</option>
+                                        <option value="section">305</option>
+                                        </select>
+                                </th>
+                                <th>
+                                    Add Sections
+                                    <!--<button class="apply">Apply</button>-->
+                                </th> <!--10-->
+                            </tr>
+                        </thead>
+                        <tbody class="content">
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>101</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>102</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>103</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>104</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>105</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>201</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>202</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>203</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>204</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>205</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>301</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>302</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>303</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>304</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSIS</td>
+                                <td>305</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>101</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>102</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>103</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                            <tr class="content">
+                                <td>BSP</td>
+                                <td>104</td>
+                                <td><button class="view"><i class="fa-regular fa-plus"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                     
+                        <!--<div class="title-SectionEval">Section Evaluation</div>-->
+                        <table>
+                            <thead>
+                                <tr class="content-courseSection">
+                                    <th>
+                                        Course
+                                        <select name="" id="table_size">
+                                            <option value="all">All</option>
+                                            <option value="bsis">BSIS</option>
+                                            <option value="ihpd">BSP</option>
+                                            <option value="iom">BSM</option>
+                                            <option value="ion">BSN</option>
+                                            <option value="ioe">BSCE</option>
+                                            </select>
+                                    </th>
+                                    <th>
+                                        Section
+                                        <select name="" id="table_size">
+                                            <option value="All">All</option>
+                                            <option value="section">101</option>
+                                            <option value="section">102</option>
+                                            <option value="section">103</option>
+                                            <option value="section">104</option>
+                                            <option value="section">105</option>
+                                            <option value="section">201</option>
+                                            <option value="section">202</option>
+                                            <option value="section">203</option>
+                                            <option value="section">204</option>
+                                            <option value="section">205</option>
+                                            <option value="section">301</option>
+                                            <option value="section">302</option>
+                                            <option value="section">303</option>
+                                            <option value="section">304</option>
+                                            <option value="section">305</option>
+                                            </select>
+                                    </th>
+                                    <th>
+                                        Remove Sections
+                                        <button class="apply">Remove All</button>
+                                    </th> <!--10-->
+                                </tr>
+                            </thead>
+                            <tbody class="content">
+                                <tr class="content">
+                                    <td>BSIS</td>
+                                    <td>101</td>
+                                    <td><button class="view">-</button></td>
+                            </tbody>
+                        </table>
+                
+                </div>
+             </div>
+
+             <div id="overlay"></div>
+
+            
+                
+      
+
+        <!--FACULTY RECORD FILTER-->
+        <div class="facultyContainer">
+            <header>
+                <div class="filterFaculty">
+                    <div class="faculty">
+                       <b> Show </b><select name="" id="table_size">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select> <b>Faculty</b>
+                    </div>
+
+                    <div class="addFacultyBtn">
+                        <button><i class="fa-regular fa-plus"></i><a href="newfaculty.html">New Faculty</a></button>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <table>
+
+                <thead>
+                    <tr class="content">
+                        <th>No.</th>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>
+                            Institute
+                            <select name="" id="table_size">
+                                <option value="all">All</option>
+                                <option value="bsis">IICS</option>
+                                <option value="ihpd">IHPD</option>
+                                <option value="iom">IOM</option>
+                                <option value="ion">ION</option>
+                                <option value="ioe">IOE</option>
+                                </select>
+                        </th>
+                        <th>
+                            Sex
+                            <select name="" id="table_size">
+                                <option value="All">All</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                </select>
+                        </th>
+                        <th>
+                            Action
+                            <button class="apply">Apply</button>
+                        </th> <!--10-->
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr> 
+                        <td  data-modal-target="#modal">1</td>
+                        <td  data-modal-target="#modal">John</td>
+                        <td  data-modal-target="#modal">Dee</td>
+                        <td  data-modal-target="#modal">Matibag</td>
+                        <td  data-modal-target="#modal">jdmatibag@kld.edu.ph</td>
+                        <td  data-modal-target="#modal">IICS</td>
+                        <td  data-modal-target="#modal">Male</td>
+                        <td>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td data-modal-target="#modal2">2</td>
+                        <td data-modal-target="#modal2">John Lloyd</td>
+                        <td data-modal-target="#modal2">Flordeliza</td>
+                        <td data-modal-target="#modal2">Cruz</td>
+                        <td data-modal-target="#modal2">jlfcruz@kld.edu.ph</td>
+                        <td data-modal-target="#modal2">IICS</td>
+                        <td data-modal-target="#modal2">Male</td>
+                        <td>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td data-modal-target="#modal3">3</td>
+                        <td data-modal-target="#modal3">Kim</td>
+                        <td data-modal-target="#modal3">Firmalino</td>
+                        <td data-modal-target="#modal3">Chiu</td>
+                        <td data-modal-target="#modal3">kfchiu@kld.edu.ph</td>
+                        <td data-modal-target="#modal3">IHPD</td>
+                        <td data-modal-target="#modal3">Female</td>
+                        <td>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td data-modal-target="#modal3">4</td>
+                        <td data-modal-target="#modal3">Kathryn</td>
+                        <td data-modal-target="#modal3">Andaya</td>
+                        <td data-modal-target="#modal3">Bernardo</td>
+                        <td data-modal-target="#modal3">kdbernardo@kld.edu.ph</td>
+                        <td data-modal-target="#modal3">IOE</td>
+                        <td data-modal-target="#modal3">Female</td>
+                        <td>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td data-modal-target="#modal5">5</td>
+                        <td data-modal-target="#modal5">Ma. Leonora</td>
+                        <td data-modal-target="#modal5">Cruz</td>
+                        <td data-modal-target="#modal5">Teresa</td>
+                        <td data-modal-target="#modal5">mlcteresa@kld.edu.ph</td>
+                        <td data-modal-target="#modal5">IICS</td>
+                        <td data-modal-target="#modal5">Female</td>
+                        <td>
+                            <button><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button><i class="fa-regular fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--===CHART JS===-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="chart.js"></script>
+
+    <script src="adminSidebar.js"></script>
+    <script src="scriptModal.js"></script>
+</body>
+</html>
